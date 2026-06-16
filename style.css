@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+/* Variáveis CSS para cores e fontes */
+:root {
+    --white: #ffffff;
+    --blue-magenta: #fafafe; /* Mais clara para seções claras */
+    --blue-dark: #05131c; /* Mais escura para seções escuras */
+    --marron: #a67546;
+    --red: #ff3131;
+    --green: #6dff4f;
+    --black: #000000;
+    --font-title: "EB Garamond", serif;
+    --font-body: "Lato", sans-serif;
+}
+/*🎨 Sugestões visuais com base nas cores da sua identidade:
+Fundo dos slides: --blue-dark (#05131c) ou --blue-magenta (#fafafe)
+
+Títulos: branco ou --green (#6dff4f)
+
+Destaques e CTA: --red (#ff3131)
+
+Ícones e elementos decorativos: --marron (#a67546)
+
+*/
+/* Reset básico e tipografia */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-body);
+}
+
+body {
+    height: 100%; /* Ajuste para que o body se adapte ao conteúdo */
+    background-color: var(--blue-dark); /* Cor de fundo padrão, se necessário */
+    line-height: 1.6; /* Melhora a legibilidade do texto */
+}
+
+/* Header */
+header {
+    display: flex;
+    width: 100%;
+    height: 100px;
+    justify-content: center; /* Centraliza o logo */
+    align-items: center;
+    background-color: var(--blue-dark);
+    box-shadow: 0 5px 10px var(--marron); /* Ajuste a sombra para ser mais sutil e direcional */
+    padding: 0 1.5rem; /* Adiciona padding horizontal */
+}
+
+.logo img {
+    width: 290px;
+    height: auto;
+}
+
+/* Main content */
+main {
+    padding-top: 0; /* Remove padding-top desnecessário aqui */
+}
+
+/* Seções (E-book e Planner) */
+.ebook,
+.planner {
+	margin-top: 3rem;
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens quebrem a linha em telas menores */
+    justify-content: center; /* Centraliza o conteúdo */
+    align-items: center;
+    min-height: 80vh; /* Garante que a seção tenha uma altura mínima para visualização */
+    padding: 4rem 1.5rem; /* Padding generoso para todas as seções */
+    text-align: center; /* Centraliza o texto */
+    gap: 2rem; /* Espaçamento entre os elementos flex */
+}
+
+.ebook {
+    background-color: var(--blue-dark);
+    color: var(--white);
+}
+
+.planner {
+    background-color: var(--blue-magenta);
+    color: var(--blue-dark);
+}
+
+/* Conteúdo de texto das seções */
+.ebook-txt,
+.planner-txt {
+    max-width: 600px; /* Largura máxima para o bloco de texto */
+    padding: 1rem;
+}
+
+.ebook-txt h1 {
+    color: var(--green);
+    font-size: clamp(2.5rem, 5vw, 4rem); /* Tamanho de fonte responsivo */
+    font-family: var(--font-title);
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.planner-txt h2 {
+    color: var(--blue-dark);
+    font-size: clamp(2rem, 4vw, 3rem); /* Tamanho de fonte responsivo */
+    font-family: var(--font-title);
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.ebook-txt p,
+.planner-txt p, .kit-txt p {
+    font-size: clamp(1rem, 2vw, 1.1rem); /* Tamanho de fonte responsivo */
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Imagens das seções */
+.ebook-img img,
+.planner-img img{
+    max-width: 100%;
+    height: auto;
+    width: 400px;
+    margin: 1.5rem 0;
+    display: block;
+    /* --- Efeito de Sombra para as imagens --- */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Sombra mais visível para dar profundidade */
+    border-radius: 8px; /* Opcional: bordas levemente arredondadas para a imagem */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição para o efeito de hover */
+}
+.kit-img img {
+    max-width: 100%;
+    height: auto;
+    width: 500px;
+    margin: 1.5rem 0;
+    display: block;
+    /* --- Efeito de Sombra para as imagens --- */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Sombra mais visível para dar profundidade */
+    border-radius: 8px; /* Opcional: bordas levemente arredondadas para a imagem */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição para o efeito de hover */
+}
+.ebook-img img:hover,
+.planner-img img:hover, .kit-img img:hover{
+    transform: translateY(-15px); /* Levanta a imagem um pouco ao passar o mouse */
+    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.3); /* Aumenta a sombra no hover */
+}
+.kit-txt h2{
+    color: var(--marron);
+    font-size: clamp(2rem, 4vw, 3rem); /* Tamanho de fonte responsivo */
+    font-family: var(--font-title);
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+.kit {
+    background-color: var(--white);
+    color: var(--blue-dark);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 1.5rem;
+    text-align: center;
+    gap: 2rem;
+}
+.ebook-txt .preco, .planner-txt .preco,
+.kit-txt .preco{
+    color: var(--marron);
+    font-size: 3rem;
+}
+.exemplo {
+    background-color: var(--blue-magenta);
+    color: var(--blue-dark);
+    text-align: center;
+    padding: 4rem 1.5rem;
+}
+
+.exemplo h2 {
+    font-family: var(--font-title);
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 1rem;
+    color: var(--marron);
+}
+
+.exemplo p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.exemplo-imgs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.exemplo-imgs img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.exemplo-imgs img:hover {
+    transform: scale(1.05);
+}
+
+/* Botões CTA */
+.cta-btn {
+    display: inline-block;
+    padding: 15px 45px;
+    background-color: var(--green);
+    color: var(--black);
+    border-radius: 5px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cta-btn:hover {
+    background-color: var(--red);
+    color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+footer{
+    text-align: center;
+    padding: 20px;
+    color: var(--blue-magenta);
+}
+/* Responsividade */
+@media (max-width: 768px) {
+    .ebook,
+    .planner {
+        flex-direction: column;
+        padding: 3rem 1rem;
+    }
+
+    .ebook-img,
+    .kit-img {
+        order: -1;
+    }
+
+    .ebook-txt,
+    .planner-txt {
+        text-align: center;
+    }
+
+    .ebook-txt p,
+    .planner-txt p,
+    .kit-txt p {
+        text-align: center;
+    }
+
+    .ebook-txt .preco, .planner-txt .preco,
+.kit-txt .preco{
+    color: var(--marron);
+    font-size: 1.5rem;
+}
+
+}
+
+@media (max-width: 480px) {
+    header {
+        height: 80px;
+    }
+
+    .logo img {
+        width: 200px;
+    }
+
+    .cta-btn {
+        padding: 12px 30px;
+        font-size: 0.9rem;
+    }
+}
